@@ -1,23 +1,34 @@
 package pl.coderslab.spring01hibernate.entity;
 
+
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "authors")
 public class Author {
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String firstName;
     private String lastName;
 
-    public Author() {
+
+    @ManyToMany(mappedBy = "authors")
+    private List<Book> books;
+
+    public List<Book> getBooks() {
+        return books;
     }
 
-    public Author(Long id, String firstName, String lastName) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public void setBooks(List<Book> books) {
+        this.books = books;
+    }
+
+    public Author() {
     }
 
     public Long getId() {

@@ -3,6 +3,7 @@ package pl.coderslab.spring01hibernate.entity;
 
 import javax.persistence.*;
 
+
 @Entity
 @Table (name = "publishers")
 public class Publisher {
@@ -10,6 +11,8 @@ public class Publisher {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+
+
 
     public Publisher() {
     }
