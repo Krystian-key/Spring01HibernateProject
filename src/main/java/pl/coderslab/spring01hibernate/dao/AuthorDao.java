@@ -7,6 +7,8 @@ import pl.coderslab.spring01hibernate.entity.Book;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import java.util.List;
 
 @Repository
 @Transactional
@@ -33,5 +35,11 @@ public class AuthorDao {
     //- usuwanie po id
     public void delete(Author author) {
         entityManager.remove(entityManager.contains(author) ? author : entityManager.merge(author));
+    }
+
+        public List<Author> readAll(){
+            Query query = this.entityManager.createQuery("SELECT a FROM Author a");
+            return query.getResultList();
+
     }
 }

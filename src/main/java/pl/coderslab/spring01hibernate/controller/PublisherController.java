@@ -1,11 +1,15 @@
 package pl.coderslab.spring01hibernate.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pl.coderslab.spring01hibernate.dao.PublisherDao;
 import pl.coderslab.spring01hibernate.entity.Publisher;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 public class PublisherController {
@@ -22,7 +26,7 @@ public class PublisherController {
         Publisher publisher = new Publisher();
         publisher.setName("Varjat");
         publisherDao.savePublisher(publisher);
-        return "Id dodanej książki to:"
+        return "Id publishera:"
                 + publisher.getId();
     }
 
@@ -51,5 +55,16 @@ public class PublisherController {
         Publisher publisher = publisherDao.findById(id);
         publisherDao.delete(publisher);
         return "deleted";
+    }
+
+
+    @GetMapping("/publishers/all")
+    @ResponseBody
+    public String showAll(){
+        List<Publisher> publishers = publisherDao.readAll();
+        String collect = publishers.stream()
+                .map(Publisher::toString)
+                .collect(Collectors.joining(", \r\n <br>"));
+        return collect;
     }
 }

@@ -1,12 +1,15 @@
 package pl.coderslab.spring01hibernate.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pl.coderslab.spring01hibernate.dao.AuthorDao;
 import pl.coderslab.spring01hibernate.entity.Author;
-import pl.coderslab.spring01hibernate.entity.Book;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 public class AuthorController {
@@ -54,5 +57,15 @@ public class AuthorController {
         Author author = authorDao.findById(id);
         authorDao.delete(author);
         return "deleted";
+    }
+
+    @GetMapping("/author/all")
+    @ResponseBody
+    public String showAll(){
+        List<Author> authors = authorDao.readAll();
+        String collect = authors.stream()
+                .map(Author::toString)
+                .collect(Collectors.joining(", \r\n <br>"));
+        return collect;
     }
 }

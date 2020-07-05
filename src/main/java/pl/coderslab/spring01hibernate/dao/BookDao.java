@@ -7,6 +7,9 @@ import pl.coderslab.spring01hibernate.entity.Book;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import java.util.ArrayList;
+import java.util.List;
 
 @Repository
 @Transactional
@@ -14,7 +17,7 @@ public class BookDao {
 
     // zapisywanie
     @PersistenceContext
-   private EntityManager entityManager;
+    private EntityManager entityManager;
 
     public void saveBook(Book book) {
         entityManager.persist(book);
@@ -36,7 +39,22 @@ public class BookDao {
 
     public void delete(Book book) {
         entityManager.remove(entityManager.contains(book) ?
-                book : entityManager.merge(book)); }
+                book : entityManager.merge(book));
+    }
+
+    //pobierania listy wszystkich obiektów
+
+    public List<Book> readAll(){
+        Query q = this.entityManager.createQuery("SELECT b FROM Book b");
+        return q.getResultList();
+    }
+
+
+    public List<Book> getRatingList(int rating){
+        Query q = this.entityManager.createQuery("SELECT b FROM Book b WHERE b.rating >= :rating");
+        q.setParameter("rating", rating);
+        return q.getResultList();
+    }
 
 
 }
