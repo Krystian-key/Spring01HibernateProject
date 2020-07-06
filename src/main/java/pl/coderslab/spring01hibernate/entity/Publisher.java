@@ -1,17 +1,16 @@
 package pl.coderslab.spring01hibernate.entity;
 
-
 import javax.persistence.*;
 
 
 @Entity
-@Table (name = "publishers")
+@Table(name = "publishers")
 public class Publisher {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-
 
 
     public Publisher() {

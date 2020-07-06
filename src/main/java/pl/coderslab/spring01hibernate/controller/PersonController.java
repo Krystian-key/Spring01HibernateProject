@@ -1,11 +1,9 @@
 package pl.coderslab.spring01hibernate.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 import pl.coderslab.spring01hibernate.dao.PersonDao;
-import pl.coderslab.spring01hibernate.entity.Author;
 import pl.coderslab.spring01hibernate.entity.Person;
 
 @Controller
@@ -17,7 +15,7 @@ public class PersonController {
         this.personDao = personDao;
     }
 
-    //    - zapis encji
+
     @RequestMapping("/Person/add")
     @ResponseBody
     public String hello() {
@@ -25,12 +23,12 @@ public class PersonController {
         person.setLogin("smokinglogin");
         person.setEmail("Welka@asd.interia.pl");
         person.setPassword("seecretPassword");
-        personDao.savePerson(person);
+        personDao.save(person);
         return "Id to:"
                 + person.getId();
     }
 
-    //    - edycja encji
+
     @RequestMapping("/person/update/{id}/{login}/{password}/{email}")
     @ResponseBody
     public String updatePerson(@PathVariable long id, @PathVariable String login, @PathVariable String password, @PathVariable String email) {
@@ -42,7 +40,7 @@ public class PersonController {
         return person.toString();
     }
 
-    //- pobieranie
+
     @RequestMapping("/person/get/{id}")
     @ResponseBody
     public String getPerson(@PathVariable long id) {
@@ -50,7 +48,6 @@ public class PersonController {
         return person.toString();
     }
 
-    //- usuwanie
     @RequestMapping("/person/delete/{id}")
     @ResponseBody
     public String deletePerson(@PathVariable long id) {
@@ -60,10 +57,40 @@ public class PersonController {
     }
 
 
+    @RequestMapping("/form")
+    public String form() {
+        return "person/form";
+    }
 
 
+    @PostMapping("/form")
+    @ResponseBody
+    public Person formPost(@RequestParam String login,
+                           @RequestParam String email,
+                           @RequestParam String password) {
 
+        Person person = new Person()
+                .setLogin(login)
+                .setEmail(email)
+                .setPassword(password);
 
+        personDao.save(person);
 
+        return person;
+    }
 
+    @GetMapping("/formBind")
+    public String formBind(Model m) {
+        m.addAttribute(new Person().setLogin("example"));
+
+        return "person/formBind";
+    }
+
+    @PostMapping("/formBind")
+    @ResponseBody
+    public Person formBindPost(@ModelAttribute Person person) {
+        personDao.save(person);
+
+        return person;
+    }
 }

@@ -1,7 +1,6 @@
 package pl.coderslab.spring01hibernate.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,27 +30,25 @@ public class BookController {
 
     @GetMapping("/book/addNew")
     @ResponseBody
-    public String addNew(){
+    public String addNew() {
         Publisher publisher = new Publisher();
         publisher.setName("KRK");
-        publisherDao.savePublisher(publisher);
+        publisherDao.save(publisher);
 
         Author author = new Author();
         author.setFirstName("Henryk");
         author.setLastName("Sienkiewicz");
-        authorDao.saveAuthor(author);
+        authorDao.save(author);
 
         Book book = new Book();
         book.setTitle("W pustyni i w puszczy");
         book.setPublisher(publisher);
         book.getAuthors().add(author);
 
-        bookDao.saveBook(book);
+        bookDao.save(book);
 
         return "dodano";
     }
-
-    //pobieranie po id <--> bookdao
 
     @RequestMapping("/book/get/{id}")
     @ResponseBody
@@ -60,17 +57,16 @@ public class BookController {
         return book.toString();
     }
 
-    //update <---> bookdao
+
     @RequestMapping("/book/update/{id}/{title}")
     @ResponseBody
-    public String updateBook(@PathVariable long id, @PathVariable String title ) {
+    public String updateBook(@PathVariable long id, @PathVariable String title) {
         Book book = bookDao.findById(id);
         book.setTitle(title);
         bookDao.update(book);
         return book.toString();
     }
 
-    //usuwanie obiektu po id <--> bookdao
 
     @RequestMapping("/book/delete/{id}")
     @ResponseBody
@@ -81,11 +77,9 @@ public class BookController {
     }
 
 
-
-    //test with jeson
     @GetMapping("/book/all")
     @ResponseBody
-    public String showAll(){
+    public String showAll() {
         List<Book> books = bookDao.readAll();
         String collect = books.stream()
                 .map(Book::toString)
@@ -95,12 +89,13 @@ public class BookController {
 
     @GetMapping("/byRating/{rating}")
     @ResponseBody
-    public String byRating(@PathVariable int rating){
+    public String byRating(@PathVariable int rating) {
         List<Book> books = bookDao.getRatingList(rating);
         String collect = books.stream()
                 .map(Book::toString)
                 .collect(Collectors.joining(", \n <br>"));
         return collect;
     }
+
 
 }

@@ -1,6 +1,8 @@
 package pl.coderslab.spring01hibernate.controller;
 
+import org.hibernate.Hibernate;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,19 +21,19 @@ public class AuthorController {
         this.authorDao = bookDao;
     }
 
-    //    - zapis encji
+
     @RequestMapping("/author/add")
     @ResponseBody
     public String hello() {
         Author author = new Author();
         author.setFirstName("Jejms");
         author.setLastName("Welk");
-        authorDao.saveAuthor(author);
+        authorDao.save(author);
         return "Id to:"
                 + author.getId();
     }
 
-    //    - edycja encji
+
     @RequestMapping("/author/update/{id}/{firstName}/{lastName}")
     @ResponseBody
     public String updateAuthor(@PathVariable long id, @PathVariable String firstName, @PathVariable String lastName) {
@@ -42,7 +44,7 @@ public class AuthorController {
         return author.toString();
     }
 
-    //- pobieranie
+
     @RequestMapping("/author/get/{id}")
     @ResponseBody
     public String getAuthor(@PathVariable long id) {
@@ -50,7 +52,7 @@ public class AuthorController {
         return author.toString();
     }
 
-    //- usuwanie
+
     @RequestMapping("/author/delete/{id}")
     @ResponseBody
     public String deleteAuthor(@PathVariable long id) {
@@ -61,11 +63,22 @@ public class AuthorController {
 
     @GetMapping("/author/all")
     @ResponseBody
-    public String showAll(){
+    public String showAll() {
         List<Author> authors = authorDao.readAll();
         String collect = authors.stream()
                 .map(Author::toString)
                 .collect(Collectors.joining(", \r\n <br>"));
         return collect;
+    }
+
+    @GetMapping("/getBooks/{authorId}")
+    @ResponseBody
+    @Transactional
+    public String getBooks(@PathVariable Long authorId){
+        Author author = authorDao.findById(authorId);
+
+        Hibernate.initialize(author.getBooks());
+
+        return author.getBooks().toString();
     }
 }

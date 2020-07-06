@@ -5,36 +5,62 @@
       <artifact name="Spring01hibernate:war exploded" />
     </artifacts-to-build>
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:maven" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="83e1cc76-d917-4a45-a092-00ce832a2fdd" name="Default Changelist" comment="adding gitignore">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/controller/AuthorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/controller/AuthorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/controller/BookFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/controller/StudentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/model/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/addForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/person/form.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/person/formBind.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/person/student.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/app/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/app/AppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/controller/PublisherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/controller/PublisherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/dao/AuthorDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/dao/AuthorDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/controller/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/controller/PersonController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/dao/BookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/dao/PublisherDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/dao/PublisherDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/entity/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/entity/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/entity/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/META-INF/Spring01hibernate.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/controller/AuthorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/controller/AuthorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/entity/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/app/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/app/AppConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/controller/BookController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/controller/PublisherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/controller/PublisherController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/controller/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/controller/PersonController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/dao/BookDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/dao/BookDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/entity/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/entity/Author.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/entity/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/entity/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/Spring01hibernate.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/coderslab/spring01hibernate/controller/AuthorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/coderslab/spring01hibernate/controller/AuthorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/entity/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/entity/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/coderslab/spring01hibernate/app/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/coderslab/spring01hibernate/app/AppConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pl/coderslab/spring01hibernate/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/coderslab/spring01hibernate/controller/BookController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/coderslab/spring01hibernate/controller/PublisherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/coderslab/spring01hibernate/controller/PublisherController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/coderslab/spring01hibernate/controller/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/coderslab/spring01hibernate/controller/PersonController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pl/coderslab/spring01hibernate/dao/BookDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/coderslab/spring01hibernate/dao/BookDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/coderslab/spring01hibernate/dao/PublisherDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/coderslab/spring01hibernate/entity/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/coderslab/spring01hibernate/entity/Author.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/coderslab/spring01hibernate/entity/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/coderslab/spring01hibernate/entity/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/coderslab/spring01hibernate/entity/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/coderslab/spring01hibernate/entity/Person.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +70,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
@@ -69,6 +96,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -76,7 +104,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pl.coderslab.spring01hibernate.controller" />
       <recent name="pl.coderslab.spring01hibernate.app" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\workspace\Spring01hibernate\src\main\webapp\WEB-INF\views\book" />
+      <recent name="C:\Users\Administrator\Desktop\workspace\Spring01hibernate\src\main\webapp\WEB-INF\views\person" />
     </key>
   </component>
   <component name="RunManager">
@@ -235,7 +268,10 @@
       <workItem from="1593885156984" duration="1191000" />
       <workItem from="1593886376552" duration="1595000" />
       <workItem from="1593888651860" duration="954000" />
-      <workItem from="1593890933439" duration="5850000" />
+      <workItem from="1593890933439" duration="18681000" />
+      <workItem from="1593970149066" duration="602000" />
+      <workItem from="1593973688311" duration="644000" />
+      <workItem from="1594055016687" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="adding gitignore">
       <created>1593852547539</created>
@@ -249,6 +285,18 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="adding gitignore" />
@@ -267,14 +315,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="564" y="152" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593851991179" />
-    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1593940494256">
+    <state x="721" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593955618245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1593940494256" />
+    <state x="721" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1593955618245" />
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1593949271390">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1593949271390" />
     <state x="840" y="118" width="800" height="759" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1593851834238">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="840" y="118" width="800" height="759" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1920.1040@0.0.1920.1040" timestamp="1593851834238" />
+    <state x="743" y="389" width="436" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1593958155146">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="743" y="389" width="436" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1593958155146" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593851113777">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -291,54 +347,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="665" y="218" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593852353727" />
-    <state width="1593" height="220" key="GridCell.Tab.0.bottom" timestamp="1593941018537">
+    <state width="1877" height="175" key="GridCell.Tab.0.bottom" timestamp="1593966708410">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1593" height="220" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593941018537" />
-    <state width="1593" height="220" key="GridCell.Tab.0.center" timestamp="1593941018537">
+    <state width="1877" height="175" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593966708410" />
+    <state width="1877" height="175" key="GridCell.Tab.0.center" timestamp="1593966708410">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1593" height="220" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593941018537" />
-    <state width="1593" height="220" key="GridCell.Tab.0.left" timestamp="1593941018537">
+    <state width="1877" height="175" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593966708410" />
+    <state width="1877" height="175" key="GridCell.Tab.0.left" timestamp="1593966708410">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1593" height="220" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593941018537" />
-    <state width="1593" height="220" key="GridCell.Tab.0.right" timestamp="1593941018537">
+    <state width="1877" height="175" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593966708410" />
+    <state width="1877" height="175" key="GridCell.Tab.0.right" timestamp="1593966708410">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1593" height="220" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593941018537" />
-    <state width="1593" height="220" key="GridCell.Tab.1.bottom" timestamp="1593941018538">
+    <state width="1877" height="175" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593966708410" />
+    <state width="1593" height="201" key="GridCell.Tab.1.bottom" timestamp="1593966708404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1593" height="220" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593941018538" />
-    <state width="1593" height="220" key="GridCell.Tab.1.center" timestamp="1593941018537">
+    <state width="1593" height="201" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593966708404" />
+    <state width="1593" height="201" key="GridCell.Tab.1.center" timestamp="1593966708404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1593" height="220" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593941018537" />
-    <state width="1593" height="220" key="GridCell.Tab.1.left" timestamp="1593941018537">
+    <state width="1593" height="201" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593966708404" />
+    <state width="1593" height="201" key="GridCell.Tab.1.left" timestamp="1593966708404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1593" height="220" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593941018537" />
-    <state width="1593" height="220" key="GridCell.Tab.1.right" timestamp="1593941018538">
+    <state width="1593" height="201" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593966708404" />
+    <state width="1593" height="201" key="GridCell.Tab.1.right" timestamp="1593966708404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1593" height="220" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593941018538" />
-    <state width="1593" height="220" key="GridCell.Tab.2.bottom" timestamp="1593941018538">
+    <state width="1593" height="201" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593966708404" />
+    <state width="1593" height="201" key="GridCell.Tab.2.bottom" timestamp="1593966708405">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1593" height="220" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593941018538" />
-    <state width="1593" height="220" key="GridCell.Tab.2.center" timestamp="1593941018538">
+    <state width="1593" height="201" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593966708405" />
+    <state width="1593" height="201" key="GridCell.Tab.2.center" timestamp="1593966708405">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1593" height="220" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593941018538" />
-    <state width="1593" height="220" key="GridCell.Tab.2.left" timestamp="1593941018538">
+    <state width="1593" height="201" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593966708405" />
+    <state width="1593" height="201" key="GridCell.Tab.2.left" timestamp="1593966708404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1593" height="220" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593941018538" />
-    <state width="1593" height="220" key="GridCell.Tab.2.right" timestamp="1593941018538">
+    <state width="1593" height="201" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593966708404" />
+    <state width="1593" height="201" key="GridCell.Tab.2.right" timestamp="1593966708405">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1593" height="220" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593941018538" />
+    <state width="1593" height="201" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593966708405" />
     <state x="440" y="94" key="SettingsEditor" timestamp="1593868917571">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

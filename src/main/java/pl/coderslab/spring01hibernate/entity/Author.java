@@ -1,12 +1,10 @@
 package pl.coderslab.spring01hibernate.entity;
 
 
-
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "authors")
 public class Author {
 
 
@@ -53,6 +51,10 @@ public class Author {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getFullName() {
+        return this.firstName + " " + this.lastName;
     }
 
     @Override

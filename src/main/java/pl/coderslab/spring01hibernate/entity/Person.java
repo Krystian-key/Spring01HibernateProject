@@ -14,7 +14,7 @@ public class Person {
 
     @OneToOne
     @JoinColumn(name = "details_id",
-            unique=true)
+            unique = true)
 
     private PersonDetails details;
 
@@ -25,32 +25,45 @@ public class Person {
         return id;
     }
 
-    public void setId(Long id) {
+    public Person setId(Long id) {
         this.id = id;
+        return this;
     }
 
     public String getLogin() {
         return login;
     }
 
-    public void setLogin(String login) {
+    public Person setLogin(String login) {
         this.login = login;
+        return this;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
+    public Person setPassword(String password) {
         this.password = password;
+        return this;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public Person setEmail(String email) {
         this.email = email;
+        return this;
+    }
+
+    public PersonDetails getDetails() {
+        return details;
+    }
+
+    public Person setDetails(PersonDetails details) {
+        this.details = details;
+        return this;
     }
 
     @Override

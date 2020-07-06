@@ -25,7 +25,7 @@ public class PublisherController {
     public String hello() {
         Publisher publisher = new Publisher();
         publisher.setName("Varjat");
-        publisherDao.savePublisher(publisher);
+        publisherDao.save(publisher);
         return "Id publishera:"
                 + publisher.getId();
     }
