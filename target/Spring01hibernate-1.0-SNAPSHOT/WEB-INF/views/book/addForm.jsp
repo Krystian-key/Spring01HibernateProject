@@ -1,48 +1,38 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: soul
-  Date: 7/5/20
-  Time: 3:27 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="form"
+           uri="http://www.springframework.org/tags/form" %>
+
 <html>
 <head>
-    <title>Book</title>
+    <title>Add book</title>
 </head>
 <body>
+
 <form:form method="post" modelAttribute="book">
-
     <div>
-        <label for="title">Title</label>
-        <form:input id="title" path="title" type="text"/>
+        <label for="title">title</label>
+        <form:input id="title" path="title"/>
     </div>
-
     <div>
-        <label for="rating">Rating</label>
-        <form:input id="rating" path="rating" type="text"/>
+        <label for="rating">rating</label>
+        <form:input id="rating" path="rating" type="number"/>
     </div>
-
     <div>
-        <label for="description">Description</label>
-        <form:input id="description" path="description" type="text"/>
+        <label for="description">description</label>
+        <form:textarea id="description" path="description"/>
     </div>
-
     <div>
-        <label for="publisher">Publisher</label>
-        <form:select id="publisher" path="publisher" items="${publishers}"/>
+        <label for="publisher">publisher</label>
+        <form:select id="publisher" path="publisher.id" items="${publishers}" itemLabel="name" itemValue="id"/>
     </div>
-
     <div>
-        <label for="authors">Publisher</label>
-        <form:select id="authors" path="authors" items="${authors}" multiple="true"/>
+        <label for="authors">authors</label>
+        <form:select id="authors" path="authors" items="${authors}" multiple="true" itemValue="id"
+                     itemLabel="fullName"/>
     </div>
     <div>
         <input type="submit">
     </div>
-
 </form:form>
-
 </body>
 </html>

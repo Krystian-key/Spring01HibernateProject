@@ -15,24 +15,31 @@ import java.util.List;
 
 @Controller
 public class BookFormController {
+
     private BookDao bookDao;
     private PublisherDao publisherDao;
     private AuthorDao authorDao;
 
-    public void BookController(BookDao bookDao, PublisherDao publisherDao, AuthorDao authorDao) {
+    public BookFormController(BookDao bookDao, PublisherDao publisherDao, AuthorDao authorDao) {
         this.bookDao = bookDao;
         this.publisherDao = publisherDao;
         this.authorDao = authorDao;
     }
 
+    @GetMapping("/all")
+    public String showAll(){
+        return "book/list";
+    }
+
     @GetMapping("/addForm")
-    public String addForm(Model model) {
-        model.addAttribute(new Book());
+    public String addForm(Model m){
+        m.addAttribute("book", new Book());
         return "/book/addForm";
     }
+
     @PostMapping("/addForm")
     public String addFormPost(@ModelAttribute Book book){
-        bookDao.save(book);
+        bookDao.create(book);
 
         return "redirect:all";
     }
@@ -44,12 +51,11 @@ public class BookFormController {
 
     @ModelAttribute("authors")
     public List<Author> authors(){
-        return authorDao.readAll();
+        return authorDao.getAll();
     }
 
     @ModelAttribute("books")
     public List<Book> books(){
         return bookDao.readAll();
     }
-
 }

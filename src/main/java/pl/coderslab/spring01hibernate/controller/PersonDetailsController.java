@@ -25,7 +25,7 @@ public class PersonDetailsController {
         personDetails.setCity("krakow");
         personDetails.setStreet("krakowska");
         personDetails.setStreetNumber(12);
-        personDetailsDao.save(personDetails);
+        personDetailsDao.update(personDetails);
         return "Id to:"
                 + personDetails.getId();
     }

@@ -3,6 +3,7 @@ package pl.coderslab.spring01hibernate.entity;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "person")
 public class Person {
 
     @Id
@@ -14,12 +15,20 @@ public class Person {
 
     @OneToOne
     @JoinColumn(name = "details_id",
-            unique = true)
-
+            unique=true)
     private PersonDetails details;
+
+    public PersonDetails getDetails() {
+        return details;
+    }
+
+    public void setDetails(PersonDetails details) {
+        this.details = details;
+    }
 
     public Person() {
     }
+
 
     public Long getId() {
         return id;
@@ -54,15 +63,6 @@ public class Person {
 
     public Person setEmail(String email) {
         this.email = email;
-        return this;
-    }
-
-    public PersonDetails getDetails() {
-        return details;
-    }
-
-    public Person setDetails(PersonDetails details) {
-        this.details = details;
         return this;
     }
 

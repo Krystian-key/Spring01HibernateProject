@@ -2,31 +2,33 @@ package pl.coderslab.spring01hibernate.entity;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Entity
+@Table(name = "authors")
 public class Author {
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotNull
     private String firstName;
+    @NotNull
     private String lastName;
-
-
     @ManyToMany(mappedBy = "authors", fetch = FetchType.EAGER)
     private List<Book> books;
 
-    public List<Book> getBooks() {
-        return books;
-    }
-
-    public void setBooks(List<Book> books) {
-        this.books = books;
-    }
-
     public Author() {
+    }
+
+    public Author(Long id, String firstName, String lastName) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public  String getFullName(){
+        return  this.firstName + " " + this.lastName;
     }
 
     public Long getId() {
@@ -53,10 +55,6 @@ public class Author {
         this.lastName = lastName;
     }
 
-    public String getFullName() {
-        return this.firstName + " " + this.lastName;
-    }
-
     @Override
     public String toString() {
         return "Author{" +
@@ -64,5 +62,13 @@ public class Author {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 '}';
+    }
+
+    public List<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(List<Book> books) {
+        this.books = books;
     }
 }

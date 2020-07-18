@@ -8,31 +8,29 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="form"
            uri="http://www.springframework.org/tags/form" %>
+
 <html>
 <head>
-    <title>Form Binded</title>
+    <title>form binded</title>
 </head>
 <body>
 
 <form:form method="post" modelAttribute="person">
-
     <div>
         <label for="login">Login</label>
         <form:input id="login" path="login"/>
     </div>
     <div>
-        <label for="email">email</label>
+        <label for="email">Email</label>
         <form:input id="email" path="email" type="email"/>
     </div>
     <div>
-        <label for="password">password</label>
+        <label for="password">Password</label>
         <form:input id="password" path="password" type="password"/>
     </div>
     <div>
         <input type="submit">
     </div>
-
 </form:form>
-
 </body>
 </html>

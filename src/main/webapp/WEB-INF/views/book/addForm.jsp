@@ -22,17 +22,19 @@
         <form:textarea id="description" path="description"/>
     </div>
     <div>
+        <label for="pages">Pages</label>
+        <form:input id="pages" path="pages" type="number"/>
+    </div>
+    <div>
         <label for="publisher">publisher</label>
         <form:select id="publisher" path="publisher.id" items="${publishers}" itemLabel="name" itemValue="id"/>
     </div>
     <div>
         <label for="authors">authors</label>
-        <form:select id="authors" path="authors" items="${authors}" multiple="true" itemValue="id"
-                     itemLabel="fullName"/>
+        <form:select id="authors" path="authors" items="${authors}" multiple="true" itemValue="id" itemLabel="fullName"/>
     </div>
     <div>
         <input type="submit">
     </div>
 </form:form>
 </body>
-</html>

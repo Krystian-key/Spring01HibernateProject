@@ -19,14 +19,24 @@ public class PublisherController {
         this.publisherDao = publisher;
     }
 
+    @GetMapping("/publishers/all")
+    @ResponseBody
+    public String showAll(){
+        List<Publisher> publishers = publisherDao.readAll();
+        String collect = publishers.stream()
+                .map(Publisher::toString)
+                .collect(Collectors.joining(", \r\n <br>"));
+        return collect;
+    }
+
     //    - zapis encji
     @RequestMapping("/publisher/add")
     @ResponseBody
     public String hello() {
         Publisher publisher = new Publisher();
         publisher.setName("Varjat");
-        publisherDao.save(publisher);
-        return "Id publishera:"
+        publisherDao.savePublisher(publisher);
+        return "Id dodanej książki to:"
                 + publisher.getId();
     }
 
@@ -55,16 +65,5 @@ public class PublisherController {
         Publisher publisher = publisherDao.findById(id);
         publisherDao.delete(publisher);
         return "deleted";
-    }
-
-
-    @GetMapping("/publishers/all")
-    @ResponseBody
-    public String showAll(){
-        List<Publisher> publishers = publisherDao.readAll();
-        String collect = publishers.stream()
-                .map(Publisher::toString)
-                .collect(Collectors.joining(", \r\n <br>"));
-        return collect;
     }
 }

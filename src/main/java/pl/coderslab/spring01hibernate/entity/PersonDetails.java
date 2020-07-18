@@ -1,21 +1,29 @@
 package pl.coderslab.spring01hibernate.entity;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "person_details")
 public class PersonDetails {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private  Long id;
     private String firstName;
     private String lastName;
-    private Integer streetNumber;
+    private  Integer streetNumber;
     private String street;
     private String city;
 
+    public PersonDetails() {
+    }
+
+    public PersonDetails(Long id, String firstName, String lastName, Integer streetNumber, String street, String city) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.streetNumber = streetNumber;
+        this.street = street;
+        this.city = city;
+    }
 
     public Long getId() {
         return id;
@@ -71,7 +79,7 @@ public class PersonDetails {
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", streetNumber=" + streetNumber +
+                ", streetNumber='" + streetNumber + '\'' +
                 ", street='" + street + '\'' +
                 ", city='" + city + '\'' +
                 '}';

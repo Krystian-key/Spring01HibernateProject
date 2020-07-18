@@ -17,7 +17,6 @@ import java.util.stream.Collectors;
 
 @Controller
 public class BookController {
-
     private final BookDao bookDao;
     private PublisherDao publisherDao;
     private AuthorDao authorDao;
@@ -28,58 +27,42 @@ public class BookController {
         this.authorDao = authorDao;
     }
 
+
     @GetMapping("/book/addNew")
     @ResponseBody
-    public String addNew() {
+    public String addNew(){
         Publisher publisher = new Publisher();
         publisher.setName("KRK");
-        publisherDao.save(publisher);
+        publisherDao.savePublisher(publisher);
 
         Author author = new Author();
         author.setFirstName("Henryk");
         author.setLastName("Sienkiewicz");
-        authorDao.save(author);
+        authorDao.saveAuthor(author);
 
         Book book = new Book();
         book.setTitle("W pustyni i w puszczy");
         book.setPublisher(publisher);
         book.getAuthors().add(author);
 
-        bookDao.save(book);
+        bookDao.create(book);
 
         return "dodano";
     }
 
-    @RequestMapping("/book/get/{id}")
+    @GetMapping("/book/anyPublisher")
     @ResponseBody
-    public String getBook(@PathVariable long id) {
-        Book book = bookDao.findById(id);
-        return book.toString();
+    public String showWithPublisher(){
+        List<Book> books = bookDao.getPublisherIsNotNull();
+        String collect = books.stream()
+                .map(Book::toString)
+                .collect(Collectors.joining(", \r\n <br>"));
+        return collect;
     }
-
-
-    @RequestMapping("/book/update/{id}/{title}")
-    @ResponseBody
-    public String updateBook(@PathVariable long id, @PathVariable String title) {
-        Book book = bookDao.findById(id);
-        book.setTitle(title);
-        bookDao.update(book);
-        return book.toString();
-    }
-
-
-    @RequestMapping("/book/delete/{id}")
-    @ResponseBody
-    public String deleteBook(@PathVariable long id) {
-        Book book = bookDao.findById(id);
-        bookDao.delete(book);
-        return "deleted";
-    }
-
 
     @GetMapping("/book/all")
     @ResponseBody
-    public String showAll() {
+    public String showAll(){
         List<Book> books = bookDao.readAll();
         String collect = books.stream()
                 .map(Book::toString)
@@ -89,13 +72,71 @@ public class BookController {
 
     @GetMapping("/byRating/{rating}")
     @ResponseBody
-    public String byRating(@PathVariable int rating) {
+    public String byRating(@PathVariable int rating){
         List<Book> books = bookDao.getRatingList(rating);
         String collect = books.stream()
                 .map(Book::toString)
-                .collect(Collectors.joining(", \n <br>"));
+                .collect(Collectors.joining(", \r\n <br>"));
         return collect;
     }
 
+    @GetMapping("/byPublisher/{id}")
+    @ResponseBody
+    public String byPublisher(@PathVariable long id){
+        List<Book> books = bookDao.getPublisherById(id);
+        String collect = books.stream()
+                .map(Book::toString)
+                .collect(Collectors.joining(", \r\n <br>"));
+        return collect;
+    }
 
+    @GetMapping("/byAuthor/{name}")
+    @ResponseBody
+    public String byPublisher(@PathVariable String name){
+        List<Book> books = bookDao.getByAuthor(name);
+        String collect = books.stream()
+                .map(Book::toString)
+                .collect(Collectors.joining(", \r\n <br>"));
+        return collect;
+    }
+
+    //    - zapis encji
+    @RequestMapping("/book/add")
+    @ResponseBody
+    public String hello() {
+        Book book = new Book();
+        book.setTitle("Thinking in Java");
+        book.setRating(10);
+        book.setDescription("Be a good programmer");
+        bookDao.create(book);
+        return "Id dodanej książki to:"
+                + book.getId();
+    }
+
+    //    - edycja encji
+    @RequestMapping("/book/update/{id}/{title}")
+    @ResponseBody
+    public String updateBook(@PathVariable long id, @PathVariable String title) {
+        Book book = bookDao.findById(id);
+        book.setTitle(title);
+        bookDao.update(book);
+        return book.toString();
+    }
+
+    //- pobieranie
+    @RequestMapping("/book/get/{id}")
+    @ResponseBody
+    public String getBook(@PathVariable long id) {
+        Book book = bookDao.findById(id);
+        return book.toString();
+    }
+
+    //- usuwanie
+    @RequestMapping("/book/delete/{id}")
+    @ResponseBody
+    public String deleteBook(@PathVariable long id) {
+        Book book = bookDao.findById(id);
+        bookDao.delete(book);
+        return "deleted";
+    }
 }

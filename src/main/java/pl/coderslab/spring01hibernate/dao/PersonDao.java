@@ -10,24 +10,25 @@ import javax.persistence.PersistenceContext;
 @Transactional
 public class PersonDao {
 
+    //    - zapis encji
     @PersistenceContext
     EntityManager entityManager;
 
-    public void save(Person person) {
+    public void savePerson(Person person) {
         entityManager.persist(person);
     }
 
-
+    //- edycja encji
     public void update(Person person) {
         entityManager.merge(person);
     }
 
-
+    //- pobieranie po id
     public Person findById(long id) {
         return entityManager.find(Person.class, id);
     }
 
-
+    //- usuwanie po id
     public void delete(Person person) {
         entityManager.remove(entityManager.contains(person) ? person : entityManager.merge(person));
     }
