@@ -8,26 +8,25 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Form</title>
+    <title>Form unbinded</title>
 </head>
 <body>
 <form method="post">
     <div>
         <label for="login">Login</label>
-        <input id="login" name="login">
+        <input id="login" name="login" type="text">
     </div>
     <div>
-        <label for="email">email</label>
+        <label for="email">Email</label>
         <input id="email" name="email" type="email">
     </div>
     <div>
-        <label for="password">password</label>
-        <input id="password" name="password">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password">
     </div>
     <div>
         <input type="submit">
     </div>
 </form>
-
 </body>
 </html>

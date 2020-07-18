@@ -38,12 +38,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83e1cc76-d917-4a45-a092-00ce832a2fdd" name="Default Changelist" comment="adding gitignore">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/da47eb38-0fd5-4d50-896d-92fe6b07f2ab.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/da47eb38-0fd5-4d50-896d-92fe6b07f2ab.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/dao/BookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/entity/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/controller/BookFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/controller/BookFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/controller/ValidationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/spring01hibernate/controller/ValidationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/addForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/addForm.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/app/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/app/AppConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/controller/AuthorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/controller/AuthorController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/controller/BookController.class" afterDir="false" />
@@ -51,6 +50,7 @@
       <change beforePath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/controller/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/controller/PersonController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/controller/PersonDetailsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/controller/PersonDetailsController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/controller/PublisherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/controller/PublisherController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/controller/ValidationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/controller/ValidationController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/dao/AuthorDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/dao/AuthorDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/dao/BookDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/dao/BookDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/dao/PersonDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Spring01hibernate-1.0-SNAPSHOT/WEB-INF/classes/pl/coderslab/spring01hibernate/dao/PersonDao.class" afterDir="false" />
@@ -87,8 +87,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -114,7 +114,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -126,6 +127,7 @@
       <recent name="pl.coderslab.spring01hibernate.app" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\workspace\Spring01hibernate\src\main\resources" />
       <recent name="C:\Users\Administrator\Desktop\workspace\Spring01hibernate\src\main\webapp\WEB-INF\views\book" />
       <recent name="C:\Users\Administrator\Desktop\workspace\Spring01hibernate\src\main\webapp\WEB-INF\views\person" />
     </key>
@@ -294,7 +296,7 @@
       <workItem from="1594318675839" duration="595000" />
       <workItem from="1594320924264" duration="77000" />
       <workItem from="1594321046711" duration="34000" />
-      <workItem from="1595056415094" duration="3131000" />
+      <workItem from="1595056415094" duration="14776000" />
     </task>
     <task id="LOCAL-00001" summary="adding gitignore">
       <created>1593852547539</created>
@@ -330,6 +332,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="858" y="305" width="608" height="406" key="#Assign_Data_Sources/0.0.1920.1040@0.0.1920.1040" timestamp="1593857879710" />
+    <state x="845" y="383" key="#Notifications" timestamp="1595067191935">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="845" y="383" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1595067191935" />
     <state x="888" y="375" key="#Tomcat_Server" timestamp="1593851966966">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -342,10 +348,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="721" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1593955618245" />
-    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1593949271390">
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1595065712797">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1593949271390" />
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1595065712797" />
     <state x="840" y="118" width="800" height="759" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1593851834238">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -374,54 +380,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="665" y="218" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593852353727" />
-    <state width="1593" height="275" key="GridCell.Tab.0.bottom" timestamp="1595062288377">
+    <state width="1593" height="275" key="GridCell.Tab.0.bottom" timestamp="1595077883206">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1593" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595062288377" />
-    <state width="1593" height="275" key="GridCell.Tab.0.center" timestamp="1595062288377">
+    <state width="1593" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595077883206" />
+    <state width="1593" height="275" key="GridCell.Tab.0.center" timestamp="1595077883205">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1593" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595062288377" />
-    <state width="1593" height="275" key="GridCell.Tab.0.left" timestamp="1595062288377">
+    <state width="1593" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595077883205" />
+    <state width="1593" height="275" key="GridCell.Tab.0.left" timestamp="1595077883205">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1593" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595062288377" />
-    <state width="1593" height="275" key="GridCell.Tab.0.right" timestamp="1595062288377">
+    <state width="1593" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595077883205" />
+    <state width="1593" height="275" key="GridCell.Tab.0.right" timestamp="1595077883206">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1593" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595062288377" />
-    <state width="1593" height="275" key="GridCell.Tab.1.bottom" timestamp="1595062288378">
+    <state width="1593" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595077883206" />
+    <state width="1593" height="275" key="GridCell.Tab.1.bottom" timestamp="1595077883207">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1593" height="275" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595062288378" />
-    <state width="1593" height="275" key="GridCell.Tab.1.center" timestamp="1595062288378">
+    <state width="1593" height="275" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595077883207" />
+    <state width="1593" height="275" key="GridCell.Tab.1.center" timestamp="1595077883206">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1593" height="275" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595062288378" />
-    <state width="1593" height="275" key="GridCell.Tab.1.left" timestamp="1595062288378">
+    <state width="1593" height="275" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595077883206" />
+    <state width="1593" height="275" key="GridCell.Tab.1.left" timestamp="1595077883206">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1593" height="275" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595062288378" />
-    <state width="1593" height="275" key="GridCell.Tab.1.right" timestamp="1595062288378">
+    <state width="1593" height="275" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595077883206" />
+    <state width="1593" height="275" key="GridCell.Tab.1.right" timestamp="1595077883207">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1593" height="275" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595062288378" />
-    <state width="1593" height="275" key="GridCell.Tab.2.bottom" timestamp="1595062288378">
+    <state width="1593" height="275" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595077883207" />
+    <state width="1593" height="275" key="GridCell.Tab.2.bottom" timestamp="1595077883206">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1593" height="275" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595062288378" />
-    <state width="1593" height="275" key="GridCell.Tab.2.center" timestamp="1595062288378">
+    <state width="1593" height="275" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595077883206" />
+    <state width="1593" height="275" key="GridCell.Tab.2.center" timestamp="1595077883206">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1593" height="275" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595062288378" />
-    <state width="1593" height="275" key="GridCell.Tab.2.left" timestamp="1595062288378">
+    <state width="1593" height="275" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595077883206" />
+    <state width="1593" height="275" key="GridCell.Tab.2.left" timestamp="1595077883206">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1593" height="275" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595062288378" />
-    <state width="1593" height="275" key="GridCell.Tab.2.right" timestamp="1595062288378">
+    <state width="1593" height="275" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595077883206" />
+    <state width="1593" height="275" key="GridCell.Tab.2.right" timestamp="1595077883206">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1593" height="275" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595062288378" />
+    <state width="1593" height="275" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595077883206" />
     <state x="440" y="94" key="SettingsEditor" timestamp="1595059342091">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -430,6 +436,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593852555997" />
+    <state x="846" y="407" width="316" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1595067482706">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="846" y="407" width="316" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040@0.0.1920.1040" timestamp="1595067482706" />
+    <state x="756" y="340" width="408" height="355" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1595067158679">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="756" y="340" width="408" height="355" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595067158679" />
     <state x="342" y="181" key="new project wizard" timestamp="1593886350980">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -438,9 +452,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="666" y="277" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593885864891" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1593886379942">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1595068826989">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593886379942" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595068826989" />
   </component>
 </project>
