@@ -2,6 +2,8 @@ package pl.coderslab.spring01hibernate.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import pl.coderslab.spring01hibernate.dao.PersonDao;
 import pl.coderslab.spring01hibernate.entity.Person;
@@ -73,16 +75,18 @@ public class PersonController {
     public String formBind (Model model){
 
         model.addAttribute(new Person().setLogin("example"));
-//        model.addAttribute("contrys", strings);
         return "person/formBind";
     }
 
 
 
     @PostMapping("/formBind")
-    @ResponseBody
-    public Person formBindPost (@ModelAttribute Person person){
+    public String formBindPost (@ModelAttribute ("person") @Validated Person person, BindingResult bindingResult ){
+        if(bindingResult.hasErrors()){
+            return "person/formBind";
+        }
         personDao.savePerson(person);
-        return person;
+
+        return "person/details";
     }
 }

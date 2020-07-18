@@ -30,6 +30,11 @@
         <label for="password">Password</label>
         <form:input id="password" path="password" type="password"/>
     </div>
+    <div>
+        <label for="yearOfBirth">yearOfBirth</label>
+        <form:input id="yearOfBirth" path="yearOfBirth" type="number"/>
+        <form:errors path="yearOfBirth" element="div"/>
+    </div>
 
     <div>
         <input type="submit">

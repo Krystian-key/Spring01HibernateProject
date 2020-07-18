@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
@@ -23,6 +24,11 @@
     <div>
         <label for="password">Password</label>
         <input id="password" name="password" type="password">
+    </div>
+    <div>
+        <label for="yearOfBirth">yearOfBirth</label>
+        <input id="yearOfBirth" path="yearOfBirth" type="number">
+        <form:errors path="yearOfBirth" element="div"/>
     </div>
     <div>
         <input type="submit">

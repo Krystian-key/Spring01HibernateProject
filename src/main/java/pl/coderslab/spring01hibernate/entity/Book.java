@@ -58,6 +58,7 @@ public class Book {
         this.authors = authors;
     }
 
+
     public Book() {
     }
 
@@ -107,7 +108,9 @@ public class Book {
                 ", title='" + title + '\'' +
                 ", rating=" + rating +
                 ", description='" + description + '\'' +
+                ", pages=" + pages +
                 ", publisher=" + publisher +
+                ", authors=" + authors +
                 '}';
     }
 }
